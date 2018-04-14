@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../logo.svg'
+import logo from '../images/logo.svg'
 
 export default () => (
   <header className='green tc pv4 pv5-ns'>
