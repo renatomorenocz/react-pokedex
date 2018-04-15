@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import App from './App';
 import { MemoryRouter as Router } from 'react-router';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
+  shallow(
     <Router>
       <App />
-    </Router>,
-    div
+    </Router>
   );
-  ReactDOM.unmountComponentAtNode(div);
 });
