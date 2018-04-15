@@ -19,7 +19,7 @@ export function formatIdPokemon(id) {
 export function getStatDisplayRatio(statValue) {
   var maxStat = 255; // verified by grepping
   var smoothedValue = smoothExponentially(statValue, maxStat);
-  return smoothedValue / maxStat * 100 / 10;
+  return Math.floor(smoothedValue / maxStat * 100 / 10);
 }
 
 // Função retirada de https://github.com/nolanlawson/pokedex.org/blob/c5799094b8d8cea9111bcae151d15a7dce65d735/src/js/shared/renderMonsterDetailView/renderStats.js
