@@ -9,6 +9,7 @@
     "history": "^4.7.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
+    "pokemon-images": "^2.0.1",
     "prettier": "^1.12.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -38,5 +39,11 @@
     "css": "tachyons src/css/app.css > src/css/index.css --minify",
     "prestart": "npm run css",
     "prebuild": "npm run css"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "react-test-renderer": "^16.3.1"
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import PokemonList from '../components/PokemonList';
+import { shallow, mount } from 'enzyme';
+import PokemonList from './PokemonList';
+import { MemoryRouter as Router } from 'react-router';
 
-const listPokemons = {
+const data = {
   count: 946,
   previous: null,
   results: [
@@ -29,15 +30,16 @@ const listPokemons = {
   ]
 };
 
-const Home = props => (
-  <section className="mw-80 center">
-    <Helmet>
-      <title>React Pokedex</title>
-    </Helmet>
-    <h1 className="h1 tc mb5 ">React Pokedex</h1>
+describe('<PokemonList />', () => {
+  it('renders without crashing', () => {
+    shallow(<PokemonList data={{ results: [] }} />);
+  });
 
-    <PokemonList data={listPokemons} />
-  </section>
-);
-
-export default Home;
+  it('renders without crashing with Itens', () => {
+    mount(
+      <Router>
+        <PokemonList data={data} />
+      </Router>
+    );
+  });
+});
