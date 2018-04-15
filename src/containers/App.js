@@ -6,7 +6,7 @@ import routes from '../routes';
 class App extends Component {
   render() {
     return (
-      <main className="sans-serif mw-100">
+      <div className="sans-serif mw-100">
         {routes.map((route, index) => (
           <Route
             key={index}
@@ -15,7 +15,7 @@ class App extends Component {
             component={route.component}
           />
         ))}
-      </main>
+      </div>
     );
   }
 }

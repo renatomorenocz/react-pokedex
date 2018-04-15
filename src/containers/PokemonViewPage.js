@@ -12044,14 +12044,13 @@ const dataPokemon = {
 };
 
 export default () => (
-  <section className="w-60 center">
+  <div className="w-60 center">
     <Helmet>
       <title>Pokemon View Page</title>
     </Helmet>
     <Link className="link underline blue hover-orange dib mt2" to="/">
       {'<'} back{' '}
     </Link>
-    <h1 className="h1 tc mb5 mt0">Pokemon view page</h1>
     <PokemonView pokemon={dataPokemon} />
-  </section>
+  </div>
 );

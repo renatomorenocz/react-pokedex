@@ -6,8 +6,8 @@ import PokemonStats from '../components/PokemonStats';
 import { capitalize, formatIdPokemon } from '../utils/helpers';
 
 const PokemonView = ({ pokemon }) => (
-  <div>
-    <section className="flex center">
+  <article>
+    <section id="info" className="flex center">
       <div className="w-50 bg-near-white br3 tc">
         <PokemonImage pokemon={pokemon.forms[0]} width={300} height={300} />
       </div>
@@ -43,13 +43,13 @@ const PokemonView = ({ pokemon }) => (
       </div>
     </section>
 
-    <section className="flex center mt4">
+    <section id="stats" className="flex center mt4">
       <div className="bg-moon-gray br3 w-100 pa3">
         <h3>Stats</h3>
         <PokemonStats stats={pokemon.stats} />
       </div>
     </section>
-  </div>
+  </article>
 );
 
 PokemonView.propTypes = {

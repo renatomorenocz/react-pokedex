@@ -30,14 +30,14 @@ const listPokemons = {
 };
 
 const Home = props => (
-  <section className="mw-80 center">
+  <div className="mw-80 center">
     <Helmet>
       <title>React Pokedex</title>
     </Helmet>
     <h1 className="h1 tc mb5 ">React Pokedex</h1>
 
     <PokemonList data={listPokemons} />
-  </section>
+  </div>
 );
 
 export default Home;
