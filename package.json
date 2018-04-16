@@ -1,6 +1,5 @@
 {
   "name": "react-pokedex",
-  "homepage": "https://renatomorenocz.github.io/react-pokedex/",
   "description": "Simple pokedex with react, redux",
   "author": "renatomorenocz@gmail.com",
   "license": "ISC",
