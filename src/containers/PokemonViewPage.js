@@ -12058,6 +12058,7 @@ class PokemonViewPage extends React.Component {
         <Helmet>
           <title>Pokemon View Page</title>
         </Helmet>
+
         <Link className="link underline blue hover-orange dib mt2 mb3" to="/">
           {'<'} back{' '}
         </Link>
