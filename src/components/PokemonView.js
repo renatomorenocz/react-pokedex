@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import PokemonImage from '../components/PokemonImage';
 import PokemonType from '../components/PokemonType';
 import PokemonStats from '../components/PokemonStats';
-import { capitalize, formatIdPokemon } from '../utils/helpers';
+import { capitalize } from '../utils/helpers';
 
 const PokemonView = ({ pokemon }) => (
   <article>

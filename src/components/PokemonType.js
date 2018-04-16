@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PokemonListItem from './PokemonListItem';
 import { capitalize } from '../utils/helpers';
 
 const PokemonType = ({ type }) => {

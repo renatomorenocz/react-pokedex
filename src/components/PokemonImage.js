@@ -1,18 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getIdPokemonByUrl } from '../utils/helpers';
+import LazyLoad from 'react-image-lazy-load';
+import imagePlaceholder from '../images/placeholder.gif';
 
 const PokemonImage = ({ pokemon, width, height }) => (
   <div>
-    <img
-      src={
+    <LazyLoad
+      height={height}
+      loaderImage={true}
+      originalSrc={
         'https://assets.pokemon.com/assets/cms2/img/pokedex/full/' +
         getIdPokemonByUrl(pokemon.url) +
         '.png'
       }
-      width={width}
-      height={height}
-      alt={pokemon.name}
+      imageProps={{
+        src: imagePlaceholder,
+        alt: pokemon.name,
+        width: width
+      }}
     />
   </div>
 );
