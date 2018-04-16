@@ -8,7 +8,6 @@ export const POKEMONS_LOAD_FAILURE = 'POKEMON_LOAD_FAILURE';
 export const pokemonsLoad = () => dispatch => {
   dispatch({ type: POKEMONS_LOAD_REQUEST });
   if (!!localStorage.getItem('listOfPokemons')) {
-    console.log('User cache');
     return setTimeout(() => {
       dispatch({
         type: POKEMONS_LOAD_SUCCESS,
