@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import PokemonImage from '../components/PokemonImage';
 import PokemonType from '../components/PokemonType';
 import PokemonStats from '../components/PokemonStats';
-import { capitalize, formatIdPokemon } from '../utils/helpers';
+import { capitalize } from '../utils/helpers';
+import { Helmet } from 'react-helmet';
 
 const PokemonView = ({ pokemon }) => (
   <article>
+    <Helmet>
+      <title> {capitalize(pokemon.name)} | Pokemon View Page</title>
+    </Helmet>
     {pokemon.hasOwnProperty('name') && (
       <section id="info" className="flex center">
         <div className="w-50 bg-near-white br3 tc">
@@ -15,7 +19,7 @@ const PokemonView = ({ pokemon }) => (
         <div className="w-70 pl4">
           <h1 className="mt0">
             {capitalize(pokemon.name)}{' '}
-            <span className="gray">Nº {formatIdPokemon(pokemon.id)}</span>
+            <span className="gray">Nº {pokemon.id}</span>
           </h1>
 
           <ul className="list ma 0 pa0 bg-near-white  br3 pa3">
