@@ -22,7 +22,11 @@ class PokemonListPage extends React.Component {
         {!this.props.pokemonIsLoading && (
           <PokemonList data={this.props.listPokemons} />
         )}
-        {this.props.pokemonIsLoading && <p className="f4 tc green">Wait ...</p>}
+        {this.props.pokemonIsLoading && (
+          <div>
+            <p className="f6 tc green">Wait ...</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -43,7 +47,6 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PokemonListPage))
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(PokemonListPage)
 );

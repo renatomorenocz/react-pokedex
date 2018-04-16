@@ -1,35 +1,52 @@
 import {
-  POKEMONS_LOAD_FAILURE,
-  POKEMONS_LOAD_SUCCESS,
-  POKEMONS_LOAD_REQUEST
+  LIST_POKEMONS_LOAD_FAILURE,
+  LIST_POKEMONS_LOAD_SUCCESS,
+  LIST_POKEMONS_LOAD_REQUEST,
+  POKEMON_LOAD_FAILURE,
+  POKEMON_LOAD_SUCCESS,
+  POKEMON_LOAD_REQUEST
 } from '../actions/pokemon';
 
 const initialState = {
   count: 0,
   pokemons: [],
-  isLoading: true
+  isLoading: true,
+  currentPokemon: {},
+  error: false
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case POKEMONS_LOAD_REQUEST:
+    case LIST_POKEMONS_LOAD_REQUEST:
+    case POKEMON_LOAD_REQUEST:
       return {
         ...state,
         isLoading: true,
-        pokemons: []
+        pokemons: [],
+        currentPokemon: {},
+        error: false
       };
 
-    case POKEMONS_LOAD_FAILURE:
+    case LIST_POKEMONS_LOAD_FAILURE:
+    case POKEMON_LOAD_FAILURE:
       return {
         ...state,
-        isLoading: false
+        isLoading: false,
+        error: true
       };
 
-    case POKEMONS_LOAD_SUCCESS:
+    case LIST_POKEMONS_LOAD_SUCCESS:
       return {
         ...state,
         isLoading: false,
         pokemons: action.pokemons
+      };
+
+    case POKEMON_LOAD_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        currentPokemon: action.pokemon
       };
 
     default:
