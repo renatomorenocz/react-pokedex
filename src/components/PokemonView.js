@@ -8,11 +8,11 @@ import { Helmet } from 'react-helmet';
 
 const PokemonView = ({ pokemon }) => (
   <article>
-    <Helmet>
-      <title> {capitalize(pokemon.name)} | Pokemon View Page</title>
-    </Helmet>
     {pokemon.hasOwnProperty('name') && (
       <section id="info" className="flex center">
+        <Helmet>
+          <title> {capitalize(pokemon.name)} | Pokemon View Page</title>
+        </Helmet>
         <div className="w-50 bg-near-white br3 tc">
           <PokemonImage pokemon={pokemon.forms[0]} width={300} height={300} />
         </div>
