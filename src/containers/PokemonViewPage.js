@@ -12061,8 +12061,24 @@ class PokemonViewPage extends React.Component {
         <Link className="link underline blue hover-orange dib mt2 mb3" to="/">
           {'<'} back{' '}
         </Link>
+
         {!this.props.pokemonIsLoading && (
           <PokemonView pokemon={this.props.pokemon} />
+        )}
+
+        {this.props.pokemonIsLoading && (
+          <div>
+            <div className="flex">
+              <div className="w-50 h6 br3 tc animated-background" />
+              <div className="w-70 pl4">
+                <div className="h3 br2 mb4 animated-background" />
+                <div className="h4 br2 mb4 animated-background" />
+                <span className="dib br2 mr3 h2 w4 animated-background" />
+                <span className="dib br h2 w4 animated-background" />
+              </div>
+            </div>
+            <div className="w-100 mt3 h5 br3 tc animated-background" />
+          </div>
         )}
       </div>
     );

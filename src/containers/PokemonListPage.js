@@ -23,8 +23,56 @@ class PokemonListPage extends React.Component {
           <PokemonList data={this.props.listPokemons} />
         )}
         {this.props.pokemonIsLoading && (
-          <div>
+          <div className="ph4-l ph2 ph-3-m">
             <p className="f6 tc green">Wait ...</p>
+
+            <ul className="list flex flex-wrap justify-center ma0 pa0">
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+              <li className="w-90 w-25-m w-20-l pa3 br3">
+                <div className="animated-background h4" />
+              </li>
+            </ul>
           </div>
         )}
       </div>
