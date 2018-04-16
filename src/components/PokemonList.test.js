@@ -32,13 +32,13 @@ const data = {
 
 describe('<PokemonList />', () => {
   it('renders without crashing', () => {
-    shallow(<PokemonList data={{ results: [] }} />);
+    shallow(<PokemonList data={[]} />);
   });
 
   it('renders without crashing with Itens', () => {
     mount(
       <Router>
-        <PokemonList data={data} />
+        <PokemonList data={data.results} />
       </Router>
     );
   });
