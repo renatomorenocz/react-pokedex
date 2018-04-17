@@ -14,7 +14,7 @@ class PokemonViewPage extends React.Component {
 
   render() {
     return (
-      <div className="w-60 center">
+      <div className="w-60-ns w-80 center">
         <Helmet>
           <title>Pokemon View Page</title>
         </Helmet>

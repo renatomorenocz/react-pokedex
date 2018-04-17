@@ -13,6 +13,7 @@ const PokemonImage = ({ pokemon, width, height }) => {
   return (
     <div>
       <LazyLoad
+        className="flex tc items-center justify-center"
         height={height}
         loaderImage={true}
         originalSrc={urlImage + getIdPokemonByUrl(pokemon.url) + '.png'}

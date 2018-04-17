@@ -12,8 +12,8 @@ const PokemonStatsItem = ({ name, value }) => {
   }
 
   return (
-    <div className="flex flex-column mh2 w-100 tc">
-      {columns} <span className="b">{name}</span>
+    <div className="flex flex-column-ns flex-row-reverse mh2 w-100 tc mb2 mb0-ns">
+      {columns} <span className="b tl tc-ns mr2 mr0-ns">{name}</span>
     </div>
   );
 };

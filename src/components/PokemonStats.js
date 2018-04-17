@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import PokemonStatsItem from './PokemonStatsItem';
 
 const PokemonStats = ({ stats }) => (
-  <div className="flex justify-between">
+  <div className="flex justify-between flex-column flex-row-ns">
     {stats.map((stat, index) => (
       <PokemonStatsItem
         key={index}
