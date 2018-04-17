@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { expect } from 'chai';
 import PokemonImage from './PokemonImage';
 
 describe('<PokemonImage />', () => {

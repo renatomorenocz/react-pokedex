@@ -1,6 +1,8 @@
 import React from 'react';
+import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import PokemonList from './PokemonList';
+import PokemonListItem from './PokemonListItem';
 import { MemoryRouter as Router } from 'react-router';
 
 const data = {
@@ -35,11 +37,12 @@ describe('<PokemonList />', () => {
     shallow(<PokemonList data={[]} />);
   });
 
-  it('renders without crashing with Itens', () => {
-    mount(
+  it('check ', () => {
+    const wrapper = mount(
       <Router>
         <PokemonList data={data.results} />
       </Router>
     );
+    expect(wrapper.find(PokemonListItem)).to.have.length(20);
   });
 });
