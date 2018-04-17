@@ -1,6 +1,8 @@
 import React from 'react';
+import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import PokemonListItem from './PokemonListItem';
+import PokemonImage from './PokemonImage';
 import { MemoryRouter as Router } from 'react-router';
 
 const pokemon = {
@@ -19,5 +21,15 @@ describe('<PokemonListItem />', () => {
         <PokemonListItem pokemon={pokemon} />
       </Router>
     );
+  });
+
+  it('renders with PokemonImage', () => {
+    const wrapper = shallow(<PokemonListItem pokemon={pokemon} />);
+    expect(wrapper.find(PokemonImage)).to.have.length(1);
+  });
+
+  it('renders with span name', () => {
+    const wrapper = shallow(<PokemonListItem pokemon={pokemon} />);
+    expect(wrapper.find('span.db').text()).to.equal('Bulbasaur');
   });
 });

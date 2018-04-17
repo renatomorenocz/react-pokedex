@@ -11,7 +11,7 @@ const PokemonImage = ({ pokemon, width, height }) => {
       : 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
   return (
-    <div>
+    <React.Fragment>
       <LazyLoad
         className="flex tc items-center justify-center"
         height={height}
@@ -23,7 +23,7 @@ const PokemonImage = ({ pokemon, width, height }) => {
           width: width
         }}
       />
-    </div>
+    </React.Fragment>
   );
 };
 
