@@ -8,7 +8,10 @@ import { pokemonsLoad } from '../redux/actions/pokemon';
 
 class PokemonListPage extends React.Component {
   componentDidMount() {
-    this.props.pokemonsLoad();
+    console.log(this.props);
+    if (!this.props.isLoaded) {
+      this.props.pokemonsLoad();
+    }
   }
 
   render() {
@@ -83,7 +86,8 @@ class PokemonListPage extends React.Component {
 const mapStateToProps = state => {
   return {
     pokemonIsLoading: state.pokemon.isLoading,
-    listPokemons: state.pokemon.pokemons
+    listPokemons: state.pokemon.pokemons,
+    isLoaded: state.pokemon.isLoaded
   };
 };
 

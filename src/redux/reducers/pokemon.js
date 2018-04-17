@@ -11,14 +11,22 @@ const initialState = {
   count: 0,
   pokemons: [],
   isLoading: true,
+  isLoaded: false,
   currentPokemon: {},
   error: false
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case LIST_POKEMONS_LOAD_REQUEST:
     case POKEMON_LOAD_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        currentPokemon: {},
+        error: false
+      };
+
+    case LIST_POKEMONS_LOAD_REQUEST:
       return {
         ...state,
         isLoading: true,
@@ -39,6 +47,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
+        isLoaded: true,
         pokemons: action.pokemons
       };
 
